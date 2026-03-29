@@ -33,10 +33,7 @@ fake-news-classifier/
 ├── FakeNewsClassifier__1_.ipynb    # Main notebook (full pipeline)
 ├── README.md                       # Project documentation
 ├── .gitignore                      # Files to exclude from version control
-│
-└── data/                           # Dataset folder (not tracked by git)
-    ├── Fake.csv                    # Download separately (see below)
-    └── True.csv
+
 ```
 
 ---
@@ -55,31 +52,6 @@ Files needed:
 
 ---
 
-## ⚙️ Setup & Installation
-
-### 1. Clone the repository
-```bash
-git clone https://github.com/YOUR_USERNAME/fake-news-classifier.git
-cd fake-news-classifier
-```
-
-### 2. Install dependencies
-```bash
-pip install transformers torch spacy nltk scikit-learn pandas numpy matplotlib seaborn tqdm
-python -m spacy download en_core_web_sm
-```
-
-### 3. Add the dataset
-Place `Fake.csv` and `True.csv` inside the `data/` folder, and update the file paths in Cell 5 of the notebook.
-
-### 4. Run the notebook
-```bash
-jupyter notebook FakeNewsClassifier__1_.ipynb
-```
-
-> 💡 **Tip**: BERT embedding extraction (Cell 28) is slow on CPU. Use Google Colab with GPU runtime (`Runtime → Change runtime type → T4 GPU`) for best performance.
-
----
 
 ## 🔍 Pipeline Summary
 
@@ -130,15 +102,3 @@ Phase 4 — Classification
 | Dependency tree depth | Real news has syntactically more complex sentences |
 
 ---
-
-## 📄 License
-
-This project is for educational and research purposes (NLP coursework).
-
----
-
-## 🙏 Acknowledgements
-
-- Dataset: [ISOT Fake News Dataset](https://www.kaggle.com/datasets/csmalarkodi/isot-fake-news-dataset)
-- BERT model: [DistilBERT](https://huggingface.co/distilbert-base-uncased) via HuggingFace Transformers
-- spaCy English model: `en_core_web_sm`
